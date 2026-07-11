@@ -1,23 +1,19 @@
 class Student:
 
-    # Constructor
     def __init__(self, name, age, student_id):
         self.name = name
         self.age = age
         self.student_id = student_id
         self.grades = []
 
-    # Add grade
     def add_grade(self, score):
         self.grades.append(score)
 
-    # Calculate average
     def calculate_average(self):
         if len(self.grades) == 0:
             return 0
         return sum(self.grades) / len(self.grades)
 
-    # Student status
     def get_status(self):
         avg = self.calculate_average()
 
@@ -32,7 +28,6 @@ class Student:
         else:
             return "Fail"
 
-    # GPA
     def get_gpa(self):
         avg = self.calculate_average()
 
@@ -47,7 +42,6 @@ class Student:
         else:
             return 0.0
 
-    # Display student information
     def display_info(self):
         return {
             "Name": self.name,
@@ -58,3 +52,4 @@ class Student:
             "Status": self.get_status(),
             "GPA": self.get_gpa()
         }
+   
